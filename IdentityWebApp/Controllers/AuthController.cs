@@ -14,6 +14,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 
+//https://github.com/deepumi/AspNetMVC5Authorization
 namespace IdentityWebApp.Controllers
 {
     public class AuthController : Controller
