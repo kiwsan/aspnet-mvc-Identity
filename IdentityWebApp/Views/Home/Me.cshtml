@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Me";
+}
+
+<h2>Me</h2>
+
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+
+        var user = User.Identity.Name;
+
+        <span>Hello world: @user</span>
+
+    }
+}
