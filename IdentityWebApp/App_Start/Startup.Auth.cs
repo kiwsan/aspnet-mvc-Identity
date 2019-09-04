@@ -22,7 +22,8 @@ namespace IdentityWebApp
             {
                 CookieName = "IdentityWebApp",
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/Auth/Login")
+                LoginPath = new PathString("/Auth/Login"),
+                ExpireTimeSpan = TimeSpan.FromMinutes(49)
             });
 
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
