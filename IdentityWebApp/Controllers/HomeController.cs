@@ -15,12 +15,5 @@ namespace IdentityWebApp.Controllers
             return View();
         }
 
-        [Authorize]
-        public ActionResult Me()
-        {
-            var currentUserId = User.Identity.GetUserId();
-
-            return View();
-        }
     }
 }
