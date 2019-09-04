@@ -34,7 +34,7 @@ namespace IdentityWebApp
                 AllowInsecureHttp = true, //For Dev enviroment only (on production should be AllowInsecureHttp = false)
                 TokenEndpointPath = new PathString(TokenEndpointPath),
                 AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(50),
-                Provider = new OAuthProvider(),
+                Provider = new OAuthProvider()
             });
 
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());

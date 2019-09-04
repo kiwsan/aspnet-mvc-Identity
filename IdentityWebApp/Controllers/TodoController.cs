@@ -5,6 +5,7 @@ namespace IdentityWebApp.Controllers
     public class TodoController : ApiController
     {
         // GET: api/Todo
+        [Authorize]
         public IHttpActionResult Get()
         {
 
