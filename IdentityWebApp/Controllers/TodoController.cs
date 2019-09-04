@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace IdentityWebApp.Controllers
 {
     public class TodoController : ApiController
     {
         // GET: api/Todo
-        public IEnumerable<string> Get()
+        public IHttpActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+
+            var userName = User.Identity.Name;
+
+            return Ok($"Who is me?: I'm {userName}");
         }
 
         // GET: api/Todo/5
