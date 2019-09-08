@@ -75,7 +75,7 @@ namespace IdentityWebApp.Controllers
 
             ModelState.AddModelError("", "Invalid login attempt.");
 
-            return View(model);
+            return View("Login", model);
         }
 
         [HttpGet]
@@ -84,6 +84,7 @@ namespace IdentityWebApp.Controllers
             var ctx = Request.GetOwinContext();
             var authManager = ctx.Authentication;
 
+            ctx.Authentication.SignOut(DefaultAuthenticationTypes.ExternalBearer);
             authManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
 
             return RedirectToAction("Index", "Home");
